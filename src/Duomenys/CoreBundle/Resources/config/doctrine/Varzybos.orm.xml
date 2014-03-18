@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Duomenys\CoreBundle\Entity\Varzybos" table="varzybos">
+    <indexes>
+      <index name="fk_Varžybos_Komandos_idx" columns="Komandos_Kodas"/>
+      <index name="fk_Varžybos_Komandos1_idx" columns="Komandos_Kodas1"/>
+      <index name="fk_Varžybos_Įvykis1_idx" columns="Ivykis_ID"/>
+    </indexes>
+    <id name="id" type="integer" column="ID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="laikas" type="time" column="Laikas" nullable="true"/>
+    <field name="taskaiK1" type="integer" column="Taskai_K1" nullable="true"/>
+    <field name="taskaiK2" type="integer" column="Taskai_K2" nullable="true"/>
+    <many-to-one field="ivykis" target-entity="Ivykis">
+      <join-columns>
+        <join-column name="Ivykis_ID" referenced-column-name="ID"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="komandosKodas1" target-entity="Komandos">
+      <join-columns>
+        <join-column name="Komandos_Kodas1" referenced-column-name="ID"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="komandosKodas" target-entity="Komandos">
+      <join-columns>
+        <join-column name="Komandos_Kodas" referenced-column-name="ID"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

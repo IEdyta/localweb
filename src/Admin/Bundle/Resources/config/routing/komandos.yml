@@ -1,0 +1,30 @@
+komandos:
+    pattern:  /
+    defaults: { _controller: "AdminBundle:Komandos:index" }
+
+komandos_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AdminBundle:Komandos:show" }
+
+komandos_new:
+    pattern:  /new
+    defaults: { _controller: "AdminBundle:Komandos:new" }
+
+komandos_create:
+    pattern:  /create
+    defaults: { _controller: "AdminBundle:Komandos:create" }
+    requirements: { _method: post }
+
+komandos_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AdminBundle:Komandos:edit" }
+
+komandos_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AdminBundle:Komandos:update" }
+    requirements: { _method: post|put }
+
+komandos_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AdminBundle:Komandos:delete" }
+    requirements: { _method: post|delete }

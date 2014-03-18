@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Duomenys\CoreBundle\Entity\Ivykis" table="ivykis">
+    <id name="id" type="integer" column="ID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="pavadinimas" type="string" column="Pavadinimas" length="45" nullable="true"/>
+    <field name="data" type="date" column="Data" nullable="true"/>
+    <field name="vieta" type="string" column="Vieta" length="45" nullable="true"/>
+    <field name="kategorija" type="string" column="Kategorija" length="45" nullable="true"/>
+  </entity>
+</doctrine-mapping>

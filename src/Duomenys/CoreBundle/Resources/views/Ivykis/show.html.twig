@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Ivykis</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Pavadinimas</th>
+                <td>{{ entity.pavadinimas }}</td>
+            </tr>
+            <tr>
+                <th>Data</th>
+                <td>{{ entity.data|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Vieta</th>
+                <td>{{ entity.vieta }}</td>
+            </tr>
+            <tr>
+                <th>Kategorija</th>
+                <td>{{ entity.kategorija }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('ivykis') }}">
+            Grizti i sarasa
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('ivykis_edit', { 'id': entity.id }) }}">
+            Redaguoti
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

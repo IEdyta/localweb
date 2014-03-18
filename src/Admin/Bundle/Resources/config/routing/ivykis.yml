@@ -1,0 +1,30 @@
+ivykis:
+    pattern:  /
+    defaults: { _controller: "AdminBundle:Ivykis:index" }
+
+ivykis_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AdminBundle:Ivykis:show" }
+
+ivykis_new:
+    pattern:  /new
+    defaults: { _controller: "AdminBundle:Ivykis:new" }
+
+ivykis_create:
+    pattern:  /create
+    defaults: { _controller: "AdminBundle:Ivykis:create" }
+    requirements: { _method: post }
+
+ivykis_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AdminBundle:Ivykis:edit" }
+
+ivykis_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AdminBundle:Ivykis:update" }
+    requirements: { _method: post|put }
+
+ivykis_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AdminBundle:Ivykis:delete" }
+    requirements: { _method: post|delete }

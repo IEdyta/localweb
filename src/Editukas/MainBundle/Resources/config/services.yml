@@ -1,0 +1,7 @@
+parameters:
+#    editukas_main.example.class: Editukas\MainBundle\Example
+
+services:
+#    editukas_main.example:
+#        class: %editukas_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

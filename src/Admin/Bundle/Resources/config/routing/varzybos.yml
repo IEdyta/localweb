@@ -1,0 +1,30 @@
+varzybos:
+    pattern:  /
+    defaults: { _controller: ":Varzybos:index" }
+
+varzybos_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AdminBundle:Varzybos:show" }
+
+varzybos_new:
+    pattern:  /new
+    defaults: { _controller: "AdminBundle:Varzybos:new" }
+
+varzybos_create:
+    pattern:  /create
+    defaults: { _controller: "AdminBundle:Varzybos:create" }
+    requirements: { _method: post }
+
+varzybos_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AdminBundle:Varzybos:edit" }
+
+varzybos_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AdminBundle:Varzybos:update" }
+    requirements: { _method: post|put }
+
+varzybos_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AdminBundle:Varzybos:delete" }
+    requirements: { _method: post|delete }

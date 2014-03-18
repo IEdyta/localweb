@@ -1,0 +1,3 @@
+editukas_main_homepage:
+    pattern:  /{name}
+    defaults: { _controller: EditukasMainBundle:Default:index }

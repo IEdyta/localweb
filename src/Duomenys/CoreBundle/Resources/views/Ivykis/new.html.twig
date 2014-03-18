@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Ivykio sukurimas</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('ivykis') }}">
+            Grizti i sarasa
+        </a>
+    </li>
+</ul>
+{% endblock %}

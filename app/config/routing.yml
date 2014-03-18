@@ -1,0 +1,19 @@
+#admin:
+#    resource: "@AdminBundle/Resources/config/routing.yml"
+#   prefix:   /
+
+EditukasMainBundle_home:
+    resource: "@EditukasMainBundle/Resources/config/routing.yml"
+    prefix: /
+
+DuomenysCoreBundle_ivykis:
+    resource: "@AdminBundle/Resources/config/routing/ivykis.yml"
+    prefix:  /ivykis
+
+DuomenysCoreBundle_varzybos:
+    resource: "@AdminBundle/Resources/config/routing/varzybos.yml"
+    prefix:  /varzybos
+
+DuomenysCoreBundle_komandos:
+    resource: "@AdminBundle/Resources/config/routing/komandos.yml"
+    prefix:  /komandos

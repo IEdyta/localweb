@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Komandos</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Pavadinimas</th>
+                <td>{{ entity.pavadinimas }}</td>
+            </tr>
+            <tr>
+                <th>Miestas</th>
+                <td>{{ entity.miestas }}</td>
+            </tr>
+            <tr>
+                <th>Logotipas</th>
+                <td>{{ entity.logotipas }}</td>
+            </tr>
+            <tr>
+                <th>Sukis</th>
+                <td>{{ entity.sukis }}</td>
+            </tr>
+            <tr>
+                <th>Treneris</th>
+                <td>{{ entity.treneris }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('komandos') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('komandos_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
