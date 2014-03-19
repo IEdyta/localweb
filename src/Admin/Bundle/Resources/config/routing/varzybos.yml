@@ -1,6 +1,6 @@
 varzybos:
     pattern:  /
-    defaults: { _controller: ":Varzybos:index" }
+    defaults: { _controller: "AdminBundle:Varzybos:index" }
 
 varzybos_show:
     pattern:  /{id}/show

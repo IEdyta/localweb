@@ -1,16 +1,16 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Varzybos list</h1>
+    <h1>Varžybų sąrašas</h1>
 
     <table class="records_list">
         <thead>
             <tr>
                 <th>Laikas</th>
-                <th>Taskaik1</th>
-                <th>Taskaik2</th>
+                <th>Taškai k1</th>
+                <th>Taškai k2</th>
                 <th>Id</th>
-                <th>Actions</th>
+                <th>Veiksmai</th>
             </tr>
         </thead>
         <tbody>
@@ -23,10 +23,10 @@
                 <td>
                 <ul>
                     <li>
-                        <a href="{{ path('varzybos_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('varzybos_show', { 'id': entity.id }) }}">pavaizduoti</a>
                     </li>
                     <li>
-                        <a href="{{ path('varzybos_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('varzybos_edit', { 'id': entity.id }) }}">redaguoti</a>
                     </li>
                 </ul>
                 </td>
@@ -38,7 +38,7 @@
         <ul>
         <li>
             <a href="{{ path('varzybos_new') }}">
-                Create a new entry
+                Sukurti naujas varžybas
             </a>
         </li>
     </ul>

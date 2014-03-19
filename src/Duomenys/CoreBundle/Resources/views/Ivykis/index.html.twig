@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Ivykiu sarasas</h1>
+    <h1>Įvykių sąrašas</h1>
 
     <table class="records_list">
         <thead>
@@ -11,14 +11,14 @@
                 <th>Vieta</th>
                 <th>Kategorija</th>
                 <th>Id</th>
-                <th>Actions</th>
+                <th>Veiksmai</th>
             </tr>
         </thead>
         <tbody>
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('ivykis_show', { 'id': entity.id }) }}">{{ entity.pavadinimas }}</a></td>
-                <td>{% if entity.data %}{{ entity.data|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.data %}{{ entity.data|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ entity.vieta }}</td>
                 <td>{{ entity.kategorija }}</td>
                 <td>{{ entity.id }}</td>
@@ -40,7 +40,7 @@
         <ul>
         <li>
             <a href="{{ path('ivykis_new') }}">
-                Sukurti nauja ivyki
+                Sukurti naują įvykį
             </a>
         </li>
     </ul>

@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Komandos list</h1>
+    <h1>Komandų sąrašas</h1>
 
     <table class="records_list">
         <thead>
@@ -9,10 +9,10 @@
                 <th>Pavadinimas</th>
                 <th>Miestas</th>
                 <th>Logotipas</th>
-                <th>Sukis</th>
+                <th>Šūkis</th>
                 <th>Treneris</th>
                 <th>Id</th>
-                <th>Actions</th>
+                <th>Veiksmai</th>
             </tr>
         </thead>
         <tbody>
@@ -27,10 +27,10 @@
                 <td>
                 <ul>
                     <li>
-                        <a href="{{ path('komandos_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('komandos_show', { 'id': entity.id }) }}">pavaizduoti</a>
                     </li>
                     <li>
-                        <a href="{{ path('komandos_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('komandos_edit', { 'id': entity.id }) }}">redaguoti</a>
                     </li>
                 </ul>
                 </td>
@@ -42,7 +42,7 @@
         <ul>
         <li>
             <a href="{{ path('komandos_new') }}">
-                Create a new entry
+                Sukurti naują komandą
             </a>
         </li>
     </ul>

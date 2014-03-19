@@ -1,32 +1,32 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Komandos</h1>
+    <h1>Komanda</h1>
 
     <table class="record_properties">
         <tbody>
             <tr>
-                <th>Pavadinimas</th>
+                <th align ="left">Pavadinimas</th>
                 <td>{{ entity.pavadinimas }}</td>
             </tr>
             <tr>
-                <th>Miestas</th>
+                <th align ="left">Miestas</th>
                 <td>{{ entity.miestas }}</td>
             </tr>
             <tr>
-                <th>Logotipas</th>
+                <th align ="left">Logotipas</th>
                 <td>{{ entity.logotipas }}</td>
             </tr>
             <tr>
-                <th>Sukis</th>
+                <th align ="left">Šūkis</th>
                 <td>{{ entity.sukis }}</td>
             </tr>
             <tr>
-                <th>Treneris</th>
+                <th align ="left">Treneris</th>
                 <td>{{ entity.treneris }}</td>
             </tr>
             <tr>
-                <th>Id</th>
+                <th align ="left">Id</th>
                 <td>{{ entity.id }}</td>
             </tr>
         </tbody>
@@ -35,12 +35,12 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('komandos') }}">
-            Back to the list
+            Grįžti į sąrašą
         </a>
     </li>
     <li>
         <a href="{{ path('komandos_edit', { 'id': entity.id }) }}">
-            Edit
+            Redaguoti
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>

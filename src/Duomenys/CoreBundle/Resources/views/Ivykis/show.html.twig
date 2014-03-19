@@ -1,28 +1,28 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Ivykis</h1>
+    <h1>Įvykis</h1>
 
     <table class="record_properties">
         <tbody>
             <tr>
-                <th>Pavadinimas</th>
+                <th align="left">Pavadinimas</th>
                 <td>{{ entity.pavadinimas }}</td>
             </tr>
             <tr>
-                <th>Data</th>
-                <td>{{ entity.data|date('Y-m-d H:i:s') }}</td>
+                <th align="left">Data</th>
+                <td>{{ entity.data|date('Y-m-d') }}</td>
             </tr>
             <tr>
-                <th>Vieta</th>
+                <th align="left">Vieta</th>
                 <td>{{ entity.vieta }}</td>
             </tr>
             <tr>
-                <th>Kategorija</th>
+                <th align="left">Kategorija</th>
                 <td>{{ entity.kategorija }}</td>
             </tr>
             <tr>
-                <th>Id</th>
+                <th align="left">Id</th>
                 <td>{{ entity.id }}</td>
             </tr>
         </tbody>
@@ -31,7 +31,7 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('ivykis') }}">
-            Grizti i sarasa
+            Grįžti į sąrašą
         </a>
     </li>
     <li>
